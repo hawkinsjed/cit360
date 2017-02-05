@@ -14,12 +14,12 @@ class ThreadDemo extends Thread {
    public void run() {
       System.out.println("Running " +  threadName );
       try {
-         for(int i = 4; i > 0; i--) {
+         for(int i = 4; i > 0; i--) {  //loop 4 times
             System.out.println("Thread: " + threadName + ", " + i);
             // Let the thread sleep for a while.
             Thread.sleep(50);
          }
-      }catch (InterruptedException e) {
+      }catch (InterruptedException e) {  //catch exceptions
          System.out.println("Thread " +  threadName + " interrupted.");
       }
       System.out.println("Thread " +  threadName + " exiting.");
@@ -38,9 +38,9 @@ public class TestThread {
 
    public static void main(String args[]) {
       ThreadDemo T1 = new ThreadDemo( "Thread#1");
-      T1.start();
+      T1.start();  //start thread 1
       
       ThreadDemo T2 = new ThreadDemo( "Thread#2");
-      T2.start();
+      T2.start();  //start thread 2, they will run simultaneous
    }   
 }
