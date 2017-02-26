@@ -9,6 +9,8 @@ import java.util.*;
 public class SetDemo {
 
   public static void main(String args[]) { 
+
+//List      
       // arrayList is simple list and can have duplicates
       // unlike array size is dynamic
       List a1 = new ArrayList();
@@ -19,20 +21,43 @@ public class SetDemo {
       a1.add(30);  
       a1.add(22);  
       System.out.println("ArrayList Elements");
-      System.out.print("\t" + a1);
-      
+      //System.out.print("\t" + a1);
+//Iterator
+      //use an interator to display the contents of a1
+      Iterator it = a1.iterator();
+      while(it.hasNext()){
+          Object element = it.next();
+          System.out.print(element + ", ");
+      }
+
+//Set      
       //a set does not have duplicates
       Set<Integer> set = new HashSet<Integer>(a1); //copy arrayList into set
 
          System.out.println("\nSet Elements");
          System.out.println("\t" + set);
-
+//Tree
          TreeSet sortedSet = new TreeSet<Integer>(set); //TreeSet sorts the list
          System.out.println("The sorted list is:");
          System.out.println("\t" + sortedSet);
 
          System.out.println("The First element of the set is: "+ (Integer)sortedSet.first());
          System.out.println("The last element of the set is: "+ (Integer)sortedSet.last());
+         
+//MAP         
+      Map m1 = new HashMap(); 
+                 
+      //store keys and values
+      m1.put("Zara", "8");
+      m1.put("Mahnaz", "31");
+      m1.put("Ayan", "12");
+      m1.put("Daisy", "14");
+
+      System.out.println();
+      System.out.println(" Map Elements");
+      System.out.print("\t" + m1); //print keys and values stored in m1
+      
+
   }
       
 } 
