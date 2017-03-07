@@ -24,9 +24,9 @@ public class SetDemo {
       //System.out.print("\t" + a1);
 //Iterator
       //use an interator to display the contents of a1
-      Iterator it = a1.iterator();
-      while(it.hasNext()){
-          Object element = it.next();
+      Iterator it1 = a1.iterator();
+      while(it1.hasNext()){
+          Object element = it1.next();
           System.out.print(element + ", ");
       }
 
@@ -44,6 +44,15 @@ public class SetDemo {
          System.out.println("The First element of the set is: "+ (Integer)sortedSet.first());
          System.out.println("The last element of the set is: "+ (Integer)sortedSet.last());
          
+         
+//Iterator
+      //use an interator to display the contents of set
+      Iterator it3 = set.iterator();
+      while(it3.hasNext()){
+          Object element = it3.next();
+          System.out.print(element + ", ");
+      }
+         
 //MAP         
       Map m1 = new HashMap(); 
                  
@@ -58,6 +67,12 @@ public class SetDemo {
       System.out.print("\t" + m1); //print keys and values stored in m1
       
 
-  }
-      
+//Iterator
+      //use an interator to display the contents of m1
+      Iterator it2 = m1.keySet().iterator();
+      while(it2.hasNext()){
+          Object element = it2.next();
+          System.out.print(element + ", ");
+        }
+  }   
 } 
