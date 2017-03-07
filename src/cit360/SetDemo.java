@@ -45,7 +45,7 @@ public class SetDemo {
          System.out.println("The last element of the set is: "+ (Integer)sortedSet.last());
          
          
-      //Iterator
+//Iterator
       //use an interator to display the contents of set
       Iterator it3 = set.iterator();
       while(it3.hasNext()){
@@ -67,7 +67,7 @@ public class SetDemo {
       System.out.print("\t" + m1); //print keys and values stored in m1
       
 
-      //Iterator
+//Iterator
       //use an interator to display the contents of m1
       Iterator it2 = m1.keySet().iterator();
       while(it2.hasNext()){
